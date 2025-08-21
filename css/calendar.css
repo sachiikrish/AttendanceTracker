@@ -1,3 +1,23 @@
-#container{
-    margin-top: 40px;
+/* Add smooth transitions for a modern feel */
+#calendar {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.calendar-day {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.calendar-day:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal transition styles */
+#attendanceModal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#attendanceModal:not(.hidden) > div {
+    transform: scale(1);
 }
